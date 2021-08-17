@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Head from '../Routes e Router/Head'
+import Head from '../../Routes e Router/Head'
 import styles from './Produtos.module.css'
 
 const Produto = () => {
