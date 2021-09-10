@@ -9,7 +9,8 @@
   font-size: 1rem;
   padding: .8rem;
   background: #eee;
-  transition: .2s
+  transition: .2s;
+  border-radius: .5rem;
 }
 
 .input:focus,
