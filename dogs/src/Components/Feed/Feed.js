@@ -20,10 +20,10 @@ const Feed = ({ user }) => {
           setTimeout(() => {
             wait = false;
           }, 500);
-        }
+        } 
       }
+     
     }
-
     window.addEventListener('wheel', infiniteScroll);
     window.addEventListener('scroll', infiniteScroll);
     return () => {
@@ -61,12 +61,15 @@ const Feed = ({ user }) => {
   );
 };
 
-Feed.defaultProps = { 
-  user: 0
-}
+Feed.defaultProps = {
+  user: 0,
+};
 
 Feed.propTypes = {
-  user: PropTypes.oneOfType([PropTypes.number.isRequired, PropTypes.string.isRequired])
-}
+  user: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ]),
+};
 
 export default Feed;
