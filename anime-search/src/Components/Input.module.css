@@ -1,0 +1,8 @@
+.containerInput {
+  display: flex;
+  justify-content: center;
+}
+
+.containerInput input {
+  margin-top: 1rem;
+}

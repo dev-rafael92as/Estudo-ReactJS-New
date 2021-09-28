@@ -7,6 +7,7 @@ import { UserContext } from '../../UserContext';
 import Error from '../Helper/Error';
 import styles from './LoginForm.module.css'
 import stylesBtn from '../Forms/Button.module.css'
+import Head from '../Helper/Head';
 
 const LoginForm = () => {
   const username = useForm()
@@ -24,6 +25,7 @@ async function handleLogin(event) {
 
   return (
     <section className="animeLeft">
+      <Head title="Login" />
       <h1 className="title">Login</h1>
       <form className={styles.form} onSubmit={handleLogin}>
         <Input type="text" label="Usuário" name="username" {...username}/>
@@ -33,7 +35,7 @@ async function handleLogin(event) {
         ) : (
         <Button>Entrar</Button>
         )}
-        <Error error={error}/>
+        <Error error={error && 'Dados incorretos!'}/>
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">Perdeu a senha?</Link>
       <div className={styles.cadastro}>
